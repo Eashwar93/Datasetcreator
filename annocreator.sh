@@ -1,0 +1,2 @@
+#!/bin/bash
+python python_scripts/annocreator.py --datapath ~/Dataset/Rexroth/ --trainimagespath images/train/ --trainlabelspath labels/train/ --testimagespath images/test/ --testlabelspath labels/test/ --trainanno train.txt --testanno test.txt
