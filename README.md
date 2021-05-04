@@ -188,5 +188,6 @@ The above command generates the following files with default arguments
 ### Step 9: Cleaning up
 
 As a last step you can move the directory ```~/Dataset/Rexroth/png_annotated``` outside of ```~/Dataset/Rexroth``` and the resulting ```~/Dataset/Rexroth``` is the necessary dataset formatted completely ready and compatible with our training pipeline
+
 ####Note : It is advisible to create backup of the ```~/Dataset/Rexroth/png_annotated``` directory as a safe measure  
 
