@@ -108,6 +108,7 @@ and can be extended to further number of classes as the application grows
     1. Draw the polygon in the image covering the region which pertains to the object of interest
        ![Alt text](images/draw_polygon.png)
     2. Set a label to the drawn polygon
+       
        ![Alt text](images/label.png)
     3. Save the drawn polygon to a json file using ```Strg+S```. By default, the json file is named exactly as the image and please don't change the name of the file
    
