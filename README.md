@@ -29,7 +29,7 @@ it will work well with the default arguments with most of the scripts. Setup a w
 sh setup_workspace.sh
 ```
 
-####Note : Please use the root directory of this repo to run the below commands. 
+#### Note : Please use the root directory of this repo to run the below commands. 
 #### Running the scripts from a different directory might not work as the make use of relative paths
 #### The below instructions also assume that you have setup the Workspace from the previous setup
 
@@ -88,7 +88,7 @@ pip install labelme
 ```
 Please make yourself familiar with this [labelme](https://github.com/wkentaro/labelme) package 
 
-####Note: We will be using the Labelme Package to create polygon Annotation which will further be processed to be made as the Dataset
+#### Note: We will be using the Labelme Package to create polygon Annotation which will further be processed to be made as the Dataset
 1. Use the command labelme to open the polygon annotation tool
 ```bash
 labelme
@@ -183,11 +183,11 @@ The above command generates the following files with default arguments
 + train.txt - References the train images to train labels
 + test.txt - References the test images to test labels
 
-####Note: In-case you plan to modify the shell script annocreator.sh, the placement of ```/``` slashes is very critical and atmost care must be taken. Wrong references can throw error in the training pipeline  
+#### Note: In-case you plan to modify the shell script annocreator.sh, the placement of ```/``` slashes is very critical and atmost care must be taken. Wrong references can throw error in the training pipeline  
 
 ### Step 9: Cleaning up
 
 As a last step you can move the directory ```~/Dataset/Rexroth/png_annotated``` outside of ```~/Dataset/Rexroth``` and the resulting ```~/Dataset/Rexroth``` is the necessary dataset formatted completely ready and compatible with our training pipeline
 
-####Note : It is advisible to create backup of the ```~/Dataset/Rexroth/png_annotated``` directory as a safe measure  
+#### Note : It is advisible to create backup of the ```~/Dataset/Rexroth/png_annotated``` directory as a safe measure  
 
