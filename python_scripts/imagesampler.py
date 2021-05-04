@@ -38,8 +38,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--imgs_path", type=str, help="Ablsolute path to the images folder that you want to sample")
     parser.add_argument("--sample_rate", type=int, help="Freequency at which you wan to sample the images")
-    parser.add_argument("--file_format", type=str, help="image extension .png or .jpg with .")
-    parser.add_argument("--dest_path", type=str, help="destination path of the sampled images")
+    parser.add_argument("--file_format", type=str, help="image extension .png or .jpg with .", default=".png")
+    parser.add_argument("--dest_path", type=str, help="destination path of the sampled images",
+                        default="~/Dataset/recordings/sampled_images")
     args = parser.parse_args()
     if args.imgs_path and args.sample_rate and args.file_format and args.dest_path is not None:
         sample_images(args.imgs_path, args.sample_rate, args.file_format, args.dest_path)

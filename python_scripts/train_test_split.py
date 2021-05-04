@@ -4,7 +4,7 @@ from PIL import Image
 import argparse
 
 
-def traintestsplit(datapath, destpath):
+def traintestsplit(datapath, destpath, ratio):
 	
 	print("Specified dataset path:",datapath)
 	print("number of images files:",len(glob.glob1(datapath,"*.png")))
@@ -65,7 +65,7 @@ def traintestsplit(datapath, destpath):
 		print("Creation of %s succeeded" % labels_testdir)
 		
 	total_data = len(glob.glob1(datapath, "*.png"))
-	train_data_count = round(0.8*total_data)
+	train_data_count = round(ratio*total_data)
 	test_data_count = total_data - train_data_count
 	print("Planned number of training images:", train_data_count)
 	print("Planned number of testuation images:", test_data_count)
@@ -105,9 +105,10 @@ if __name__== "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--datapath", type=str, help="Absolute path to the saved images in png format and their coressponding json label files generateed with labelme")
 	parser.add_argument("--destpath", type=str, help="Absolute path to create the custom dataset")
+	parser.add_argument("--ratio", type=float, help="Ratio of images to be assigned for training compared to the total number of images")
 	args = parser.parse_args()
-	if args.datapath and args.destpath is not None:
-		traintestsplit(args.datapath, args.destpath)
+	if args.datapath and args.destpath and args.ratio is not None:
+		traintestsplit(args.datapath, args.destpath, args.ratio)
 	else:
 		print("Wrong usage detected")
 		parser.print_help()
