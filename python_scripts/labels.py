@@ -63,8 +63,8 @@ labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
     Label(  'unlabeled'            ,  0 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
     Label(  'monorail'             ,  1 ,        0 , 'flat'            , 1       , True         , False        , (128, 64,128) ),
-    Label(  'forklift'             ,  2 ,        1 , 'flat'            , 1       , True         , False        , (244, 35,232) ),
-    Label(  'person'               ,  3 ,       11 , 'human'           , 6       , True         , False        , (220, 20, 60) ),
+    Label(  'person'               ,  2 ,        1 , 'flat'            , 1       , True         , False        , (50, 35,232) ),
+    Label(  'forklift'             ,  3 ,       11 , 'human'           , 6       , True         , False        , (220, 255, 60) ),
 ]
 
 
