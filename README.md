@@ -21,6 +21,7 @@ pip install pyrealsense2
 pip install opencv-contrib-python
 pip install cityscapesScripts
 pip install earthpy
+pip install imutils
 ```
 ### Workspace setup
 You can create your own workspace but if you can just create a workspace using the below script 
