@@ -10,7 +10,9 @@ def sample_images(image_path, sample_rate, file_format, dest_path):
         img_name = camera_img.split("_")[1]
         img_names.append(int(img_name))
         img_names.sort()
-    sampled_img_names = img_names[::sample_rate]
+    sampled_img_names_cam1 = img_names[::sample_rate]
+    sampled_img_names_cam2 = img_names[1::sample_rate]
+    sampled_img_names = sampled_img_names_cam1 + sampled_img_names_cam2
     print("Selected Images:", sampled_img_names)
     print("Number of Selected Images:", len(sampled_img_names))
 

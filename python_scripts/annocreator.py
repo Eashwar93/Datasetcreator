@@ -77,10 +77,17 @@ if __name__ == "__main__":
 	parser.add_argument("--testlabelspath", type=str, help="Relative path to the training label images directory from the root of the custom dataset")
 	parser.add_argument("--trainanno", type=str, help="Name of the train annotation file")
 	parser.add_argument("--testanno", type=str, help="Name of the test annotation file")
+	parser.add_argument("--evalimagespath", type=str, help="Relative path to the evaluation images directory from the root of the custom dataset")
+	parser.add_argument("--evallabelspath", type=str,
+						help="Relative path to the evaluation label images directory from the root of the custom dataset")
+	parser.add_argument("--evalanno", type=str, help="Name of the train annotation file")
+	parser.add_argument("--eval", type=bool,default=False, help="True if evaluation dataset preparation and False if train or test dataset preparation")
 	args = parser.parse_args()
 	if args.datapath and args.trainimagespath and args.trainlabelspath and args.trainanno and args.testimagespath and args.testlabelspath and args.testanno is not None:
 		createtrainanno(args.datapath, args.trainimagespath, args.trainlabelspath, args.trainanno)
 		createtestanno(args.datapath, args.testimagespath, args.testlabelspath, args.testanno)
+	elif args.datapath and args.evalimagespath and args.evallabelspath and args.evalanno and args.eval is not False:
+		createtrainanno(args.datapath, args.evalimagespath, args.evallabelspath, args.evalanno)
 	else:
 		print("Wrong usage detected")
 		parser.print_help()

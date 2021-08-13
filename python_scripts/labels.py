@@ -62,9 +62,11 @@ Label = namedtuple( 'Label' , [
 labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
     Label(  'unlabeled'            ,  0 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
-    Label(  'monorail'             ,  1 ,        0 , 'flat'            , 1       , True         , False        , (128, 64,128) ),
-    Label(  'forklift'             ,  2 ,        1 , 'flat'            , 1       , True         , False        , (244, 35,232) ),
-    Label(  'person'               ,  3 ,       11 , 'human'           , 6       , True         , False        , (220, 20, 60) ),
+    Label(  'monorail'             ,  1 ,        0 , 'flat'            , 1       , True         , False        , (255, 0,0) ),
+    Label(  'person'               ,  2 ,        1 , 'flat'            , 1       , True         , False        , (0, 255,0) ),
+    Label(  'forklift1'             ,  3 ,       11 , 'human'           , 6       , True         , False        , (0, 0, 255) ),
+    Label(  'forklift2'             ,  3 ,       11 , 'human'           , 6       , True         , False        , (0, 0, 255) ),
+    Label(  'background'            ,  0 ,      255 , 'void'            , 0       , False        , True         , (  0,  0,  0) ),
 ]
 
 
